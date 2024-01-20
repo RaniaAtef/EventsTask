@@ -13,5 +13,8 @@ To run the Next.js development server:
 ```bash
 npm run dev
 
+### Running json server 
 
+```bash
+npm run db
  
