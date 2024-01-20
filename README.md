@@ -6,9 +6,9 @@ Project with a login page, home page with a list of events, and an event details
 To use this app, follow these steps:
 
 1. *Install Dependencies:*
-   bash
+  ``` bash
    npm i
-   
+  ``` 
 
 2. *Start JSON Server (Mock API):*
 ```bash
@@ -16,9 +16,9 @@ To use this app, follow these steps:
    
 ```
 3. *Run the Development Server:*
-   bash
+  ``` bash
    npm run dev
-   
+   ```
 
 
 ### Ui library used 
