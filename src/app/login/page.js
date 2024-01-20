@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Box } from "@mui/material";
@@ -93,7 +93,7 @@ export default function Login() {
             <span>Login</span>
           </button>
           <Link href="/register" className="text-blue-600 mt-2">
-            Don't have account
+            Do not have account
           </Link>
         </Box>
       </form>

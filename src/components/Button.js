@@ -10,7 +10,7 @@ const EventButton = ({ id }) => {
     if (!token) {
       router.push("/login");
     }
-  }, []);
+  }, [router]);
   return (
     <>
       <Button onClick={() => router.push(`/events/${id}`)} variant="outlined">

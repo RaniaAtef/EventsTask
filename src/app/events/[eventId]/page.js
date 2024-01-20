@@ -7,18 +7,18 @@ import { Box, Typography } from "@mui/material";
 export default function Details({ params }) {
   const eventId = params.eventId;
   const [data, setData] = useState();
-  async function getData() {
-    fetch(`http://localhost:3000/api/events/${eventId}`)
-      .then(async (res) => {
-        return res.json();
-      })
-      .then((data) => setData(data));
-  }
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
       router.push("/login");
+    }
+    async function getData() {
+      fetch(`http://localhost:3000/api/events/${eventId}`)
+        .then(async (res) => {
+          return res.json();
+        })
+        .then((data) => setData(data));
     }
     getData();
   }, []);
