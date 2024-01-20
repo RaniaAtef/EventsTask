@@ -12,7 +12,7 @@ To use this app, follow these steps:
 
 2. *Start JSON Server (Mock API):*
 ```bash
-   npm run json-server
+   npm run db
    ```
 3. *Run the Development Server:*
   ``` bash
