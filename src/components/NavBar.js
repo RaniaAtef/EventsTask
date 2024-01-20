@@ -1,5 +1,5 @@
 "use client";
-import * as React from "react";
+import { useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -9,13 +9,11 @@ import Button from "@mui/material/Button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const pages = [
-  { label: "Home", path: "/" },
-  { label: "Login", path: "/login" },
-];
-
 function NavBar() {
-  const isLoggedIn = localStorage.getItem("token");
+  let isLoggedIn;
+  useEffect(() => {
+    isLoggedIn = localStorage.getItem("token");
+  }, []);
   const pathname = usePathname();
   return (
     <AppBar position="static">
@@ -61,7 +59,6 @@ function NavBar() {
               display: { xs: "none", md: "flex", justifyContent: "end" },
             }}
           >
-            {/* {pages.map((page) => ( */}
             <Link href="/" passHref>
               <Button
                 sx={{
@@ -97,7 +94,6 @@ function NavBar() {
                 </Button>
               )}
             </Link>
-            {/* ))} */}
           </Box>
         </Toolbar>
       </Container>
