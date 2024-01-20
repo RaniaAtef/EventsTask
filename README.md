@@ -6,4 +6,12 @@ Project with a login page, home page with a list of events, and an event details
  npm run db 
  Ui library used :
  MUI 
+ ## Running the Project
+
+To run the Next.js development server:
+
+```bash
+npm run dev
+
+
  
